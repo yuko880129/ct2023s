@@ -129,6 +129,29 @@
       animation: octocat-wave 560ms ease-in-out
     }
   }
+
+  /* 波浪 */
+  a {
+    color:yellow;
+    text-decoration: none; 
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath fill='none' stroke='%23fff' d='M0 3.5c5 0 5-3 10-3s5 3 10 3 5-3 10-3 5 3 10 3'/%3E%3C/svg%3E") repeat-x 0 100%; 
+    background-size:20px auto; 
+    animation: waveMove 1s infinite linear;
+  }
+
+  a:hover {
+    color:#f30;
+    text-decoration: none;
+    background: none;
+    animation: none;
+    text-decoration: underline;
+    padding:2px 0;
+  }
+  @keyframes waveMove {
+    from { background-position:0 100%; }
+    to { background-position:20px 100%; }
+  }
+  /* 波浪 */
 </style>
 </head>
 <body>
@@ -147,6 +170,18 @@
   <div class="row hw12">
     <div class="col-md-12 twenty">
       <h1>作業 11</h1>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      題目: 完成 <a href="https://method.ac/">Method of Action</a> 五項遊戲，將遊戲過程錄影下來或是提供成績截圖(請見自我評分表)。
+      <li><a href="https://boolean.method.ac/">The Boolean Game</a></li>
+      <li><a href="https://bezier.method.ac/">The Bézier Game</a></li>
+      <li><a href="https://color.method.ac/">Color Game</a></li>
+      <li><a href="https://shape.method.ac/">Shape Type</a></li>
+      <li><a href="https://type.method.ac/">Kern Type</a></li>
     </div>
   </div>
 
@@ -176,19 +211,29 @@
         </tr>
         <tr>
           <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>2</td>
-          <td>Simple baseline - 下載 CubismWebSamples</td>
+          <td>完成 Boolean Game 通過各大關卡的一個指定小關卡(學號末位數字、round robin) (附上截圖) </td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>6</td>
-          <td>Medium baseline - 編譯執行 </td>
+          <td id='m2'>2</td>
+          <td>完成 Bézier Game (附上錄影)</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 更換 Cubism 人物模型、發佈網頁 </td>
+          <td>完成 Color Game (附上截圖)</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
+          <td id='m4'>2</td>
+          <td>完成 Shape Type (附上截圖)</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox5"></td>
+          <td id='m5'>2</td>
+          <td>完成 Kern Type (附上截圖)</td>
         </tr>
       </table>
     </div>
@@ -196,14 +241,33 @@
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
-    <div class="col-md-12 twenty">
+    <div class="col-md-4 twenty">
+      <a href="./boolean.png"> <img src="./boolean.png" width="100%" /></a>
+    </div>
+    <div class="col-md-4 twenty">
       <video id="video1" style="width:100%;max-width:100%;" controls="">
         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
       </video>
     </div>
+    <div class="col-md-4 twenty">
+      <img src="./color.png" width="100%" />
+    </div>
   </div>
 
   <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-4 twenty">
+      <img src="./shape.png" width="100%" />
+    </div>
+    <div class="col-md-4 twenty">
+      <img src="./kern.png" width="100%" />
+    </div>
+    <div class="col-md-4 twenty">
+      <!-- 無 -->
+    </div>
+  </div>
+
+
 
   <!-- ------------------------------------------------>
 
@@ -221,8 +285,6 @@
   d3.select("#myCheckbox3").on("change",update);
   d3.select("#myCheckbox4").on("change",update);
   d3.select("#myCheckbox5").on("change",update);
-  d3.select("#myCheckbox6").on("change",update);
-  d3.select("#myCheckbox7").on("change",update);
 
   update();
   
@@ -241,6 +303,16 @@
     if (d3.select("#myCheckbox3").property("checked")){
       score += parseInt(d3.select('#m3').html());   
     }
+
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());   
+    }
+
+    if (d3.select("#myCheckbox5").property("checked")){
+      score += parseInt(d3.select('#m5').html());   
+    }
+
+
 
     d3.select("#myTotal").html(score);    
   }
