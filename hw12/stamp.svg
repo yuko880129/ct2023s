@@ -37,6 +37,31 @@
   <rect x="70" y="10" width="2.7680" height="2.7680" stroke="green" stroke-width="0.1" fill="none"/>
   <text x="70" y="9" style="font-size:0.75pt;">六 7.875</text>
 
+
+  <rect x="20" y="50" width="4.8330" height="4.8330" stroke="blue" stroke-width="0.1" fill="none"/>
+  <text x="20.4" y="53.9" style="font-size:2.5pt;" transform="rotate(90 22.9,52.8)">ma</text>
+  <rect x="20" y="54.8330" width="4.8330" height="4.8330" stroke="blue" stroke-width="0.1" fill="none"/>
+  <text x="20.4" y="58.733" style="font-size:2.5pt;" transform="rotate(90 22.5,58)">in</text>
+  <rect x="20" y="59.666" width="4.8330" height="4.8330" stroke="blue" stroke-width="0.1" fill="none"/>
+  <text x="20.4" y="63.566" style="font-size:3pt;">球</text>
+
+
+  <rect x="24.833" y="50" width="4.8330" height="4.8330" stroke="blue" stroke-width="0.1" fill="none"/>
+  <text x="25.233" y="53.9" style="font-size:3pt;;" fill="#707038">優</text>
+  <rect x="24.833" y="54.8330" width="4.8330" height="4.8330" stroke="blue" stroke-width="0.1" fill="none"/>
+  <text x="25.233" y="58.733" style="font-size:3pt;" fill="#707038">子</text>
+  <rect x="24.833" y="59.666" width="4.8330" height="4.8330" stroke="blue" stroke-width="0.1" fill="none"/>
+  <text x="25.233" y="63.566" style="font-size:3pt;">女</text>
+
+
+  <rect x="29.666" y="50" width="4.8330" height="4.8330" stroke="blue" stroke-width="0.1" fill="none"/>
+  <text x="30.066" y="53.9" style="font-size:3pt;" fill="#707038">小</text>
+  <rect x="29.666" y="54.8330" width="4.8330" height="4.8330" stroke="blue" stroke-width="0.1" fill="none"/>
+  <text x="30.066" y="58.733" style="font-size:3pt;" fill="#707038">池</text>
+  <rect x="29.666" y="59.666" width="4.8330" height="4.8330" stroke="blue" stroke-width="0.1" fill="none"/>
+  <text x="30.85" y="63.566" style="font-size:3pt;">♥</text>
+
+
   <!-- Your beautiful SVG code will end here -->
 
   <rect x="50" y="50" width="4.8330" height="4.8330" stroke="blue" stroke-width="0.1" fill="none"/>
